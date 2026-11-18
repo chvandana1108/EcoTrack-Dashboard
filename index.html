@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EcoTrack | Environmental Impact Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-icon">
+                <i class="fa-solid fa-leaf"></i>
+            </div>
+
+            <div>
+                <h2>Eco<span>Track</span></h2>
+                <p>Environment Tracker</p>
+            </div>
+        </div>
+
+        <nav>
+            <a href="#dashboard" class="active">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+            </a>
+
+            <a href="#calculator">
+                <i class="fa-solid fa-calculator"></i>
+                Impact Calculator
+            </a>
+
+            <a href="#activities">
+                <i class="fa-solid fa-list-check"></i>
+                Activities
+            </a>
+
+            <a href="#statistics">
+                <i class="fa-solid fa-chart-line"></i>
+                Statistics
+            </a>
+
+            <a href="#tips">
+                <i class="fa-solid fa-lightbulb"></i>
+                Eco Tips
+            </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <i class="fa-solid fa-earth-americas"></i>
+
+            <h3>Small Actions</h3>
+            <p>Big Impact</p>
+
+            <span>🌱</span>
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main">
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div>
+                <h3>EcoTrack Dashboard</h3>
+            </div>
+
+
+            <!-- PROFILE -->
+
+            <div class="profile-area">
+                 <div class="profile">
+                 <div class="profile-photo">
+
+                        <img
+                            id="profileImage"
+                            src="vandana.jpg[1].jpg"
+                            alt="Profile Photo"
+                        >
+
+                    </div>
+
+                    <div class="profile-info">
+                        <strong id="profileName">
+                            Vandana Chauhan
+                        </strong>
+
+                        <small>
+                            Eco Explorer
+                        </small>
+                    </div>
+
+                    <button id="profileMenuBtn">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- PROFILE EDIT BOX -->
+
+        <section class="profile-card" id="profileBox">
+
+            <div class="profile-card-header">
+                <div>
+                    <h2>
+                        <i class="fa-solid fa-user"></i>
+                        My Profile
+                    </h2>
+
+                    <p>Customize your EcoTrack profile</p>
+                </div>
+
+                
+            </div>
+
+
+            <div class="profile-content">
+
+                <div class="upload-area">
+
+                    <div class="large-profile">
+
+                        <img
+                            id="largeProfileImage"
+                            src="vandanaProfile.jpg"
+                            alt="Web Developer"
+                            
+                        >
+                         <img
+                            id="ProfileImage"
+                            src="vandana.jpg[1].jpg"
+                        
+                        >
+
+                    </div>
+                           
+                    <label for="photoInput" class="upload-btn">
+
+                        <i class="fa-solid fa-camera"></i>
+
+                        Upload Photo
+
+                    </label>
+
+                    <input
+                        type="file"
+                        id="photoInput"
+                        accept="image/*"
+                        hidden
+                    >
+
+                    <p>JPG, PNG or WEBP</p>
+
+                </div>
+
+
+                <div class="profile-form">
+
+                    <label>Your Name</label>
+
+                    <input id="nameInput"value="VANDANA CHAUHAN">
+                    
+
+
+                    <label>Email</label>
+
+                    <input id="emailInput"value="vandana1120078@gmail.com">
+                       
+                
+
+                    <label>Eco Goal</label>
+
+                    <select id="goalInput">
+
+                        <option value="50">
+                            Reduce 50 kg CO₂
+                        </option>
+
+                        <option value="100">
+                            Reduce 100 kg CO₂
+                        </option>
+
+                        <option value="200">
+                            Reduce 200 kg CO₂
+                        </option>
+
+                    </select>
+
+
+               <!--<div class="btn">
+
+                    <button>
+                        class="save-btn"id="saveProfile"type="button">
+                        <i class="fa-solid fa-check"></i> Save Profile </button>
+
+                </div>-->
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= HERO ================= -->
+
+        <section class="hero" id="dashboard">
+
+            <div class="hero-content">
+
+                <span class="hero-label">
+                    🌍 Your Environmental Journey
+                </span>
+
+                <h2>
+                    Track Your Actions.
+                    <br>
+                    <span>Change The Future.</span>
+                </h2>
+
+                <p>
+                    Monitor your environmental footprint,
+                    build sustainable habits and make
+                    a positive impact on our planet.
+                </p>
+
+                <button
+                    class="primary-btn"
+                    onclick="scrollToCalculator()"
+                >
+                    Calculate Your Impact
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </div>
+
+
+            <div class="hero-plant">
+
+                <div class="sun"></div>
+
+                <div class="plant">
+                    🌱
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= STAT CARDS ================= -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <div class="stat-icon green">
+                    <i class="fa-solid fa-cloud"></i>
+                </div>
+
+                <div>
+                    <p>CO₂ Saved</p>
+
+                    <h2>
+                        <span id="co2Value">128.6</span>
+                        <small>kg</small>
+                    </h2>
+
+                    <span class="increase">
+                        ↑ 18% this month
+                    </span>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon blue">
+                    <i class="fa-solid fa-droplet"></i>
+                </div>
+
+                <div>
+                    <p>Water Saved</p>
+
+                    <h2>
+                        <span id="waterValue">2450</span>
+                        <small>L</small>
+                    </h2>
+
+                    <span class="increase">
+                        ↑ 22% this month
+                    </span>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon yellow">
+                    <i class="fa-solid fa-tree"></i>
+                </div>
+
+                <div>
+                    <p>Trees Equivalent</p>
+
+                    <h2>
+                        <span id="treeValue">5</span>
+                    </h2>
+
+                    <span class="increase">
+                        ↑ 12% this month
+                    </span>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon purple">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+
+                <div>
+                    <p>Energy Saved</p>
+
+                    <h2>
+                        <span id="energyValue">98</span>
+                        <small>kWh</small>
+                    </h2>
+
+                    <span class="increase">
+                        ↑ 15% this month
+                    </span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CALCULATOR ================= -->
+
+        <section
+            class="calculator-section"
+            id="calculator"
+        >
+
+            <div class="section-title">
+
+                <div>
+                    <span>CALCULATE</span>
+
+                    <h2>
+                        Environmental Impact Calculator
+                    </h2>
+
+                    <p>
+                        Enter your daily activities to estimate
+                        your environmental impact.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="calculator-grid">
+
+                <!-- TRANSPORT -->
+
+                <div class="input-card">
+
+                    <div class="input-icon">
+                        🚗
+                    </div>
+
+                    <h3>Transportation</h3>
+
+                    <p>
+                        How many km did you travel by car?
+                    </p>
+
+                    <input
+                        type="number"
+                        id="carKm"
+                        placeholder="Example: 10"
+                        min="0"
+                    >
+
+                    <span>km / day</span>
+
+                </div>
+
+
+                <!-- ELECTRICITY -->
+
+                <div class="input-card">
+
+                    <div class="input-icon">
+                        ⚡
+                    </div>
+
+                    <h3>Electricity</h3>
+
+                    <p>
+                        Daily electricity consumption
+                    </p>
+
+                    <input
+                        type="number"
+                        id="electricity"
+                        placeholder="Example: 5"
+                        min="0"
+                    >
+
+                    <span>kWh / day</span>
+
+                </div>
+
+
+                <!-- WATER -->
+
+                <div class="input-card">
+
+                    <div class="input-icon">
+                        💧
+                    </div>
+
+                    <h3>Water</h3>
+
+                    <p>
+                        Daily water usage
+                    </p>
+
+                    <input
+                        type="number"
+                        id="water"
+                        placeholder="Example: 100"
+                        min="0"
+                    >
+
+                    <span>Litres / day</span>
+
+                </div>
+
+
+                <!-- RECYCLING -->
+
+                <div class="input-card">
+
+                    <div class="input-icon">
+                        ♻️
+                    </div>
+
+                    <h3>Recycling</h3>
+
+                    <p>
+                        Recycled waste per day
+                    </p>
+
+                    <input
+                        type="number"
+                        id="recycling"
+                        placeholder="Example: 2"
+                        min="0"
+                    >
+
+                    <span>kg / day</span>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="calculate-btn"
+                id="calculateBtn"
+            >
+                <i class="fa-solid fa-calculator"></i>
+
+                Calculate My Impact
+
+            </button>
+
+
+            <!-- RESULT -->
+
+            <div
+                class="result-box"
+                id="resultBox"
+            >
+
+                <div class="result-item">
+
+                    <span>Estimated CO₂</span>
+
+                    <strong>
+                        <span id="resultCo2">0</span>
+                        kg/day
+                    </strong>
+
+                </div>
+
+
+                <div class="result-item">
+
+                    <span>Estimated Water</span>
+
+                    <strong>
+                        <span id="resultWater">0</span>
+                        L/day
+                    </strong>
+
+                </div>
+
+
+                <div class="result-item">
+
+                    <span>Energy Impact</span>
+
+                    <strong>
+                        <span id="resultEnergy">0</span>
+                        kWh/day
+                    </strong>
+
+                </div>
+
+
+                <div class="result-message">
+
+                    <i class="fa-solid fa-seedling"></i>
+
+                    <span id="resultMessage">
+                        Start your calculation!
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= STATISTICS ================= -->
+
+        <section
+            class="dashboard-grid"
+            id="statistics"
+        >
+
+            <div class="chart-card">
+
+                <div class="card-heading">
+
+                    <div>
+                        <h2>Impact Overview</h2>
+                        <p>Your environmental progress</p>
+                    </div>
+
+                    <select id="chartPeriod">
+
+                        <option>This Month</option>
+                        <option>Last Month</option>
+                        <option>This Year</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="chart">
+
+                    <div class="y-axis">
+                        <span>150</span>
+                        <span>120</span>
+                        <span>90</span>
+                        <span>60</span>
+                        <span>30</span>
+                        <span>0</span>
+                    </div>
+
+                    <div class="bars">
+
+                        <div class="bar-group">
+
+                            <div
+                                class="bar"
+                                style="height: 80%"
+                                title="80 kg"
+                            ></div>
+
+                            <span>May 1</span>
+
+                        </div>
+
+
+                        <div class="bar-group">
+
+                            <div
+                                class="bar"
+                                style="height: 55%"
+                                title="55 kg"
+                            ></div>
+
+                            <span>May 8</span>
+
+                        </div>
+
+
+                        <div class="bar-group">
+
+                            <div
+                                class="bar"
+                                style="height: 70%"
+                                title="70 kg"
+                            ></div>
+
+                            <span>May 15</span>
+
+                        </div>
+
+
+                        <div class="bar-group">
+
+                            <div
+                                class="bar"
+                                style="height: 90%"
+                                title="90 kg"
+                            ></div>
+
+                            <span>May 22</span>
+
+                        </div>
+
+
+                        <div class="bar-group">
+
+                            <div
+                                class="bar"
+                                style="height: 78%"
+                                title="78 kg"
+                            ></div>
+
+                            <span>May 29</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ACTIVITIES -->
+
+            <div
+                class="activity-card"
+                id="activities"
+            >
+
+                <div class="card-heading">
+
+                    <div>
+                        <h2>Recent Activities</h2>
+                        <p>Your latest eco actions</p>
+                    </div>
+
+                    <button id="clearActivities">
+                        Clear
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="activities"
+                    id="activityList"
+                >
+
+                    <div class="activity">
+
+                        <div class="activity-icon green">
+                            🚲
+                        </div>
+
+                        <div>
+                            <strong>
+                                Used Public Transport
+                            </strong>
+
+                            <small>
+                                Today, 9:30 AM
+                            </small>
+                        </div>
+
+                        <b>-2.4 kg CO₂</b>
+
+                    </div>
+
+
+                    <div class="activity">
+
+                        <div class="activity-icon blue">
+                            💧
+                        </div>
+
+                        <div>
+                            <strong>
+                                Took Shorter Shower
+                            </strong>
+
+                            <small>
+                                Today, 8:15 AM
+                            </small>
+                        </div>
+
+                        <b>-12 L Water</b>
+
+                    </div>
+
+
+                    <div class="activity">
+
+                        <div class="activity-icon yellow">
+                            💡
+                        </div>
+
+                        <div>
+                            <strong>
+                                Used LED Bulb
+                            </strong>
+
+                            <small>
+                                Yesterday, 9:00 PM
+                            </small>
+                        </div>
+
+                        <b>-1.1 kWh</b>
+
+                    </div>
+
+
+                    <div class="activity">
+
+                        <div class="activity-icon green">
+                            ♻️
+                        </div>
+
+                        <div>
+                            <strong>
+                                Recycled Waste
+                            </strong>
+
+                            <small>
+                                Yesterday, 6:45 PM
+                            </small>
+                        </div>
+
+                        <b>-1.6 kg CO₂</b>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= GOAL ================= -->
+
+        <section class="goal-section">
+
+            <div class="goal-card">
+
+                <div>
+
+                    <span class="section-label">
+                        YOUR GOAL
+                    </span>
+
+                    <h2>
+                        Reduce
+                        <span id="goalNumber">50</span>
+                        kg CO₂ this month
+                    </h2>
+
+                    <p>
+                        Keep taking small sustainable actions.
+                    </p>
+
+                </div>
+
+
+                <div class="progress-area">
+
+                    <div class="progress-info">
+
+                        <span>Progress</span>
+
+                        <strong id="progressText">
+                            75%
+                        </strong>
+
+                    </div>
+
+                    <div class="progress-bar">
+
+                        <div
+                            class="progress"
+                            id="progressBar"
+                            style="width:75%"
+                        ></div>
+
+                    </div>
+
+                    <small>
+                        <span id="progressKg">
+                            37.5
+                        </span>
+                        / 50 kg CO₂
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= TIPS ================= -->
+
+        <section
+            class="tips-section"
+            id="tips"
+        >
+
+            <div class="section-title">
+
+                <span>ECO TIPS</span>
+
+                <h2>
+                    Simple Actions, Big Impact 🌱
+                </h2>
+
+            </div>
+
+
+            <div class="tips-grid">
+
+                <div class="tip-card">
+
+                    <span>🚲</span>
+
+                    <h3>
+                        Use Public Transport
+                    </h3>
+
+                    <p>
+                        Choose cycling, walking or public
+                        transport whenever possible.
+                    </p>
+
+                </div>
+
+
+                <div class="tip-card">
+
+                    <span>💡</span>
+
+                    <h3>
+                        Save Electricity
+                    </h3>
+
+                    <p>
+                        Turn off lights and appliances
+                        when you don't need them.
+                    </p>
+
+                </div>
+
+
+                <div class="tip-card">
+
+                    <span>💧</span>
+
+                    <h3>
+                        Save Water
+                    </h3>
+
+                    <p>
+                        Reduce shower time and avoid
+                        unnecessary water wastage.
+                    </p>
+
+                </div>
+
+
+                <div class="tip-card">
+
+                    <span>♻️</span>
+
+                    <h3>
+                        Recycle More
+                    </h3>
+
+                    <p>
+                        Separate recyclable waste and
+                        reuse products whenever possible.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FOOTER ================= -->
+
+        <footer>
+
+            <div>
+                © 2026 EcoTrack.
+            </div>
+
+            <div class="social-icons">
+
+                <a href="#">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+
+            </div>
+
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+        
+
+        
+                    
+           
+
+
+          
